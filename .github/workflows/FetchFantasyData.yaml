@@ -9,6 +9,8 @@ jobs:
   fetch-data:
     runs-on: ubuntu-latest
     environment: prod # <-- link to your environment
+    permissions:
+      contents: write # <-- allow git push
 
     steps:
       - name: Checkout repo
