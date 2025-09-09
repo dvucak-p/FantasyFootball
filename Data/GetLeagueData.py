@@ -28,11 +28,11 @@ def get_median_records(league):
 
     for week in range(1, league.current_week + 1):
         scores_this_week = []
-        for box in league.box_score(week):
+        for box in league.box_scores(week):
             scores_this_week.extend([box.home_score, box.away_score or 0])
         median_score = sorted(scores_this_week)[len(scores_this_week)//2]
 
-        for box in league.box_score(week):
+        for box in league.box_scores(week):
             if box.home_team:
                 if box.home_score >= median_score:
                     median_records[box.home_team.team_id]["wins"] += 1
