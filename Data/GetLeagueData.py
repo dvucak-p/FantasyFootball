@@ -27,12 +27,25 @@ def get_median_records(league):
     median_records = {team.team_id: {"wins": 0, "losses": 0} for team in league.teams}
 
     for week in range(1, league.current_week + 1):
+        try:
+            box_scores = league.box_scores(week)
+        except KeyError:
+            print(f"Skipping week {week} (no roster data yet)")
+            continue
+
         scores_this_week = []
-        for box in league.box_scores(week):
-            scores_this_week.extend([box.home_score, box.away_score or 0])
+        for box in box_scores:
+            if box.home_score is not None:
+                scores_this_week.append(box.home_score)
+            if box.away_score is not None:
+                scores_this_week.append(box.away_score)
+
+        if not scores_this_week:  # nothing to process
+            continue
+
         median_score = sorted(scores_this_week)[len(scores_this_week)//2]
 
-        for box in league.box_scores(week):
+        for box in box_scores:
             if box.home_team:
                 if box.home_score >= median_score:
                     median_records[box.home_team.team_id]["wins"] += 1
