@@ -1,0 +1,36 @@
+name: Fetch Fantasy Football Data
+
+on:
+  schedule:
+    - cron: "0 10 * * 2" # every Tuesday at 3am PST
+  workflow_dispatch:
+
+jobs:
+  fetch-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install espn-api
+
+      - name: Run fantasy script
+        env:
+          ESPN_SWID: ${{ secrets.SWID }}
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+        run: python GetLeagueData.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data.json
+          git commit -m "Update fantasy football data" || echo "No changes to commit"
+          git push

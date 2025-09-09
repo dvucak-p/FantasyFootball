@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fantasy Football Standings</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Fantasy Football League Standings</h1>
+      <div class="table-card">
+        <table id="standings-table">
+          <thead>
+            <tr>
+              <th data-column="Rank">Rank</th>
+              <th data-column="Team">Team</th>
+              <th data-column="Record">Record</th>
+              <th data-column="WL">W/L Record</th>
+              <th data-column="Median">Median Score Record</th>
+              <th data-column="GB">GB</th>
+              <th data-column="Pts">Pts Scored</th>
+            </tr>
+          </thead>
+          <tbody id="standings-body">
+            <!-- Rows injected by JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script>
+      let standingsData = [];
+      let sortDirection = {};
+      let activeColumn = null;
+
+      async function loadStandings() {
+        try {
+          const response = await fetch("standings.json");
+          standingsData = await response.json();
+          renderTable(standingsData);
+        } catch (err) {
+          console.error("Error loading standings:", err);
+        }
+      }
+
+      function renderTable(data) {
+        const tbody = document.getElementById("standings-body");
+        tbody.innerHTML = "";
+        data.forEach((team) => {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+          <td>${team.Rank}</td>
+          <td>${team.Team}</td>
+          <td>${team.Record}</td>
+          <td>${team.WL}</td>
+          <td>${team.Median}</td>
+          <td>${team.GB}</td>
+          <td>${team.Pts}</td>
+        `;
+          tbody.appendChild(row);
+        });
+      }
+
+      function sortTable(column) {
+        // toggle asc/desc
+        sortDirection[column] = !sortDirection[column];
+        activeColumn = column;
+
+        standingsData.sort((a, b) => {
+          let valA = a[column];
+          let valB = b[column];
+
+          if (!isNaN(parseFloat(valA)) && !isNaN(parseFloat(valB))) {
+            valA = parseFloat(valA);
+            valB = parseFloat(valB);
+          } else {
+            valA = valA.toString().toLowerCase();
+            valB = valB.toString().toLowerCase();
+          }
+
+          if (valA < valB) return sortDirection[column] ? -1 : 1;
+          if (valA > valB) return sortDirection[column] ? 1 : -1;
+          return 0;
+        });
+
+        renderTable(standingsData);
+        updateHeaders();
+      }
+
+      function updateHeaders() {
+        document.querySelectorAll("#standings-table thead th").forEach((th) => {
+          th.classList.remove("sort-asc", "sort-desc");
+          if (th.getAttribute("data-column") === activeColumn) {
+            th.classList.add(
+              sortDirection[activeColumn] ? "sort-asc" : "sort-desc"
+            );
+          }
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        loadStandings();
+
+        document.querySelectorAll("#standings-table thead th").forEach((th) => {
+          th.addEventListener("click", () => {
+            const column = th.getAttribute("data-column");
+            sortTable(column);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

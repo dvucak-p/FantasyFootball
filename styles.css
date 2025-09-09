@@ -1,0 +1,117 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: linear-gradient(135deg, #1f2937, #111827);
+  color: #f9fafb;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #7cfa15; /* gold accent */
+}
+
+/* Card Wrapper */
+.table-card {
+  background: #1f2937;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+thead {
+  background: #374151;
+}
+
+thead th {
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #f9fafb;
+}
+
+tbody tr {
+  border-bottom: 1px solid #374151;
+  transition: background 0.2s ease;
+}
+
+tbody tr:hover {
+  background: rgba(250, 204, 21, 0.15);
+}
+
+tbody td {
+  padding: 0.75rem 1rem;
+  color: #e5e7eb;
+}
+
+/* Rank Highlight */
+tbody td:first-child {
+  font-weight: 700;
+  color: #7cfa15;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  table {
+    font-size: 0.85rem;
+  }
+}
+
+/* Sorting indicators */
+th {
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+}
+
+th.sort-asc::after,
+th.sort-desc::after {
+  content: "";
+  position: absolute;
+  right: 8px;
+  border: 6px solid transparent;
+}
+
+th.sort-asc::after {
+  border-bottom-color: #7cfa15; /* gold */
+  top: 35%;
+}
+
+th.sort-desc::after {
+  border-top-color: #7cfa15; /* gold */
+  top: 55%;
+}
