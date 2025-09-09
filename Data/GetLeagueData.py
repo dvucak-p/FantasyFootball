@@ -10,7 +10,7 @@ current_year = datetime.now().year
 # --- CONFIG ---
 LEAGUE_ID = 487404  # <-- your league ID
 YEAR = current_year         # <-- season year
-OUTPUT_FILE = Path("LeagueData.json")
+OUTPUT_FILE = Path("Data/LeagueData.json")
 
 # Get credentials from environment
 SWID = os.getenv("SWID")
