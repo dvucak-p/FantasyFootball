@@ -65,7 +65,9 @@ for team in league.teams:
         "W/L Record": wl_record,
         # "Median Score Record": median_str,
         "GB": gb,
-        "Pts Scored": round(team.points_for, 2)
+        "Pts Scored": round(team.points_for, 2),
+        "Home_Score_Week_1": league.box_scores(1).home_score,
+        "Away_Score_Week_1": league.box_scores(1).away_score
     })
 
 # --- Write to JSON file ---
