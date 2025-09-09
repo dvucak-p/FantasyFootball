@@ -32,6 +32,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add LeagueData.json
+          git add Data/LeagueData.json
           git commit -m "Update fantasy football data" || echo "No changes to commit"
           git push
