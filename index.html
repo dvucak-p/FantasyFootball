@@ -5,6 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fantasy Football Standings</title>
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Responsive table wrapper */
+      .table-card {
+        width: 100%;
+        overflow-x: auto;
+      }
+
+      /* Mobile-friendly styles */
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 1.5rem;
+          text-align: center;
+        }
+
+        table {
+          font-size: 0.9rem;
+          border-collapse: collapse;
+        }
+
+        th,
+        td {
+          padding: 8px;
+          text-align: center;
+        }
+
+        /* Make table rows act like cards on very small screens */
+        @media (max-width: 500px) {
+          table,
+          thead,
+          tbody,
+          th,
+          td,
+          tr {
+            display: block;
+          }
+
+          thead {
+            display: none; /* hide headers */
+          }
+
+          tr {
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 8px;
+            background: #fafafa;
+          }
+
+          td {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 8px;
+            border: none;
+            border-bottom: 1px solid #eee;
+          }
+
+          td:last-child {
+            border-bottom: none;
+          }
+
+          td::before {
+            content: attr(data-label);
+            font-weight: bold;
+            margin-right: 8px;
+          }
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="container">
