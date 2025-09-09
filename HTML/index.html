@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fantasy Football Standings</title>
-    <link rel="stylesheet" href="CSS/styles.css" />
+    <link rel="stylesheet" href="../CSS/styles.css" />
   </head>
   <body>
     <div class="container">
@@ -15,11 +15,11 @@
             <tr>
               <th data-column="Rank">Rank</th>
               <th data-column="Team">Team</th>
-              <th data-column="Record">Record</th>
-              <th data-column="WL">W/L Record</th>
-              <th data-column="Median">Median Score Record</th>
+              <th data-column="Overall Record">Overall Record</th>
+              <th data-column="W/L Record">W/L Record</th>
+              <th data-column="Median Score Record">Median Score Record</th>
               <th data-column="GB">GB</th>
-              <th data-column="Pts">Pts Scored</th>
+              <th data-column="Pts Scored">Pts Scored</th>
             </tr>
           </thead>
           <tbody id="standings-body">
@@ -36,7 +36,8 @@
 
       async function loadStandings() {
         try {
-          const response = await fetch("standings.json");
+          // fetch from Data folder
+          const response = await fetch("../Data/LeagueData.json");
           standingsData = await response.json();
           renderTable(standingsData);
         } catch (err) {
@@ -50,14 +51,14 @@
         data.forEach((team) => {
           const row = document.createElement("tr");
           row.innerHTML = `
-          <td>${team.Rank}</td>
-          <td>${team.Team}</td>
-          <td>${team.Record}</td>
-          <td>${team.WL}</td>
-          <td>${team.Median}</td>
-          <td>${team.GB}</td>
-          <td>${team.Pts}</td>
-        `;
+            <td>${team["Rank"]}</td>
+            <td>${team["Team"]}</td>
+            <td>${team["Overall Record"]}</td>
+            <td>${team["W/L Record"]}</td>
+            <td>${team["Median Score Record"]}</td>
+            <td>${team["GB"]}</td>
+            <td>${team["Pts Scored"]}</td>
+          `;
           tbody.appendChild(row);
         });
       }
