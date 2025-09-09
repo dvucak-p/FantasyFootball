@@ -8,6 +8,7 @@ on:
 jobs:
   fetch-data:
     runs-on: ubuntu-latest
+    environment: prod # <-- link to your environment
 
     steps:
       - name: Checkout repo
