@@ -26,7 +26,7 @@ jobs:
         env:
           SWID: ${{ secrets.SWID }}
           ESPN_S2: ${{ secrets.ESPN_S2 }}
-        run: python ../Data/GetLeagueData.py
+        run: python Data/GetLeagueData.py
 
       - name: Commit updated data
         run: |
