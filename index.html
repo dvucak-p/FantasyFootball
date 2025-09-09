@@ -37,7 +37,7 @@
       async function loadStandings() {
         try {
           // fetch from Data folder
-          const response = await fetch("../Data/LeagueData.json");
+          const response = await fetch("LeagueData.json");
           standingsData = await response.json();
           renderTable(standingsData);
         } catch (err) {
