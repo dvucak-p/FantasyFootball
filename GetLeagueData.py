@@ -2,10 +2,14 @@ import os
 import json
 from espn_api.football import League
 from pathlib import Path
+from datetime import datetime
+
+# Get current year
+current_year = datetime.now().year
 
 # --- CONFIG ---
-LEAGUE_ID = 123456  # <-- your league ID
-YEAR = 2024         # <-- season year
+LEAGUE_ID = 487404  # <-- your league ID
+YEAR = current_year         # <-- season year
 OUTPUT_FILE = Path("LeagueData.json")
 
 # Get credentials from environment
