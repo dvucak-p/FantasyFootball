@@ -23,7 +23,7 @@ jobs:
 
       - name: Run fantasy script
         env:
-          ESPN_SWID: ${{ secrets.SWID }}
+          SWID: ${{ secrets.SWID }}
           ESPN_S2: ${{ secrets.ESPN_S2 }}
         run: python GetLeagueData.py
 

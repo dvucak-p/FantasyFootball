@@ -6,7 +6,7 @@ from pathlib import Path
 # --- CONFIG ---
 LEAGUE_ID = 123456  # <-- your league ID
 YEAR = 2024         # <-- season year
-OUTPUT_FILE = Path("data.json")
+OUTPUT_FILE = Path("LeagueData.json")
 
 # Get credentials from environment
 SWID = os.getenv("SWID")
