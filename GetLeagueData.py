@@ -9,7 +9,7 @@ current_year = datetime.now().year
 
 # --- CONFIG ---
 LEAGUE_ID = 487404  # <-- your league ID
-YEAR = current_year         # <-- season year
+YEAR = current_year
 OUTPUT_FILE = Path("LeagueData.json")
 
 # Get credentials from environment
@@ -21,6 +21,7 @@ if not SWID or not ESPN_S2:
 
 # Connect to league
 league = League(league_id=LEAGUE_ID, year=YEAR, swid=SWID, espn_s2=ESPN_S2)
+
 
 # --- Helper: Median W/L Record ---
 def get_median_records(league):
@@ -40,10 +41,15 @@ def get_median_records(league):
             if box.away_score is not None:
                 scores_this_week.append(box.away_score)
 
-        if not scores_this_week:  # nothing to process
+        if not scores_this_week:
             continue
 
-        median_score = sorted(scores_this_week)[len(scores_this_week)//2]
+        scores_this_week.sort()
+        mid = len(scores_this_week) // 2
+        if len(scores_this_week) % 2 == 0:
+            median_score = (scores_this_week[mid - 1] + scores_this_week[mid]) / 2
+        else:
+            median_score = scores_this_week[mid]
 
         for box in box_scores:
             if box.home_team:
@@ -59,6 +65,7 @@ def get_median_records(league):
 
     return median_records
 
+
 median_records = get_median_records(league)
 
 # --- Collect Team Data ---
@@ -68,20 +75,22 @@ first_place_wins = max([t.wins for t in league.teams])
 for team in league.teams:
     overall_record = f"{team.wins}-{team.losses}-{team.ties}"
     wl_record = f"{team.wins}-{team.losses}"
-    win_pct = f"(({team.wins} + (0.5 * {team.ties})) / ({team.wins}-{team.losses}-{team.ties})) * 100"
+    games_played = team.wins + team.losses + team.ties
+    win_pct = round(((team.wins + 0.5 * team.ties) / games_played) * 100, 2) if games_played > 0 else 0.0
     median_record = median_records[team.team_id]
     median_str = f"{median_record['wins']}-{median_record['losses']}"
-    gb = (first_place_wins - team.wins)
+    gb = first_place_wins - team.wins
+
     teams_data.append({
         "Rank": team.standing,
         "Team": team.team_name,
         "Overall Record": overall_record,
+        "W/L Record": wl_record,
         "Win %": win_pct,
-        "Matchup Record": wl_record,
         "Median Score Record": median_str,
         "GB": gb,
-        "PF": round(team.points_for, 2),
-        "PA": round(team.points_against, 2)
+        "Pts Scored": round(team.points_for, 2),
+        "Pts Against": round(team.points_against, 2)
     })
 
 # --- Write to JSON file ---
