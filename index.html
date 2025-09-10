@@ -16,10 +16,12 @@
               <th data-column="Rank">Rank</th>
               <th data-column="Team">Team</th>
               <th data-column="Overall Record">Overall Record</th>
-              <th data-column="W/L Record">W/L Record</th>
+              <th data-column="Win %">W/L Record</th>
+              <th data-column="Matchup Record">Matchup Record</th>
               <th data-column="Median Score Record">Median Score Record</th>
               <th data-column="GB">GB</th>
-              <th data-column="Pts Scored">Pts Scored</th>
+              <th data-column="PF">PF</th>
+              <th data-column="PA">PA</th>
             </tr>
           </thead>
           <tbody id="standings-body">
@@ -54,10 +56,12 @@
             <td>${team["Rank"]}</td>
             <td>${team["Team"]}</td>
             <td>${team["Overall Record"]}</td>
-            <td>${team["W/L Record"]}</td>
+            <td>${team["Win %"]}</td>
+            <td>${team["Matchup Record"]}</td>
             <td>${team["Median Score Record"]}</td>
             <td>${team["GB"]}</td>
-            <td>${team["Pts Scored"]}</td>
+            <td>${team["PF"]}</td>
+            <td>${team["PA"]}</td>
           `;
           tbody.appendChild(row);
         });

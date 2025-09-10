@@ -68,6 +68,7 @@ first_place_wins = max([t.wins for t in league.teams])
 for team in league.teams:
     overall_record = f"{team.wins}-{team.losses}-{team.ties}"
     wl_record = f"{team.wins}-{team.losses}"
+    win_pct = ((team.wins + (0.5 * team.ties)) / ({team.wins}-{team.losses}-{team.ties})) * 100
     median_record = median_records[team.team_id]
     median_str = f"{median_record['wins']}-{median_record['losses']}"
     gb = (first_place_wins - team.wins)
@@ -75,10 +76,12 @@ for team in league.teams:
         "Rank": team.standing,
         "Team": team.team_name,
         "Overall Record": overall_record,
-        "W/L Record": wl_record,
+        "Win %": win_pct,
+        "Matchup Record": wl_record,
         "Median Score Record": median_str,
         "GB": gb,
-        "Pts Scored": round(team.points_for, 2)
+        "PF": round(team.points_for, 2),
+        "PA": round(team.points_against, 2)
     })
 
 # --- Write to JSON file ---

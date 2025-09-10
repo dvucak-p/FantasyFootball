@@ -28,7 +28,7 @@ h1 {
   margin-bottom: 1.5rem;
   font-size: 2rem;
   font-weight: 700;
-  color: #7cfa15; /* gold accent */
+  color: #7cfa15; /* accent */
 }
 
 /* Card Wrapper */
@@ -65,6 +65,16 @@ tbody tr {
   transition: background 0.2s ease;
 }
 
+/* Alternating row colors */
+tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02); /* subtle dark gray */
+}
+
+tbody tr:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.06); /* slightly lighter */
+}
+
+/* Hover highlight */
 tbody tr:hover {
   background: rgba(124, 250, 21, 0.144);
 }
@@ -107,13 +117,13 @@ th.sort-desc::after {
 }
 
 th.sort-asc::after {
-  border-bottom-color: #7cfa15; /* gold */
+  border-bottom-color: #7cfa15;
   top: 35%;
   right: 0%;
 }
 
 th.sort-desc::after {
-  border-top-color: #7cfa15; /* gold */
+  border-top-color: #7cfa15;
   top: 55%;
   right: 0%;
 }
