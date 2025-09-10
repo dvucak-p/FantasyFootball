@@ -22,6 +22,7 @@
               <th data-column="GB">GB</th>
               <th data-column="PF">PF</th>
               <th data-column="PA">PA</th>
+              <th data-column="Acquisition Budget">Acquisition Budget</th>
             </tr>
           </thead>
           <tbody id="standings-body">
@@ -50,7 +51,7 @@
       function renderTable(data) {
         const tbody = document.getElementById("standings-body");
         tbody.innerHTML = "";
-        data.forEach((team) => {
+        data.forEach((team, index) => {
           const row = document.createElement("tr");
           row.innerHTML = `
             <td>${team["Rank"]}</td>
@@ -62,8 +63,25 @@
             <td>${team["GB"]}</td>
             <td>${team["PF"]}</td>
             <td>${team["PA"]}</td>
+            <td>${team["Acquisition Budget"]}</td>
           `;
           tbody.appendChild(row);
+
+          // ✅ Add cut line only if table is Rank-sorted
+          if (
+            document
+              .getElementById("standings-table")
+              .classList.contains("rank-sorted") &&
+            index === 5
+          ) {
+            const cutRow = document.createElement("tr");
+            cutRow.classList.add("cut-line");
+            const cutCell = document.createElement("td");
+            cutCell.colSpan = 10;
+            cutCell.innerHTML = "——— PLAYOFF CUT LINE ———";
+            cutRow.appendChild(cutCell);
+            tbody.appendChild(cutRow);
+          }
         });
       }
 
@@ -91,6 +109,17 @@
 
         renderTable(standingsData);
         updateHeaders();
+
+        // ✅ Toggle cut line only if sorting by Rank
+        const table = document.getElementById("standings-table");
+        if (column === "Rank") {
+          table.classList.add("rank-sorted");
+        } else {
+          table.classList.remove("rank-sorted");
+        }
+
+        // ✅ Re-render to ensure cut line shows only when Rank-sorted
+        renderTable(standingsData);
       }
 
       function updateHeaders() {

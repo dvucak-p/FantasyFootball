@@ -19,7 +19,7 @@ body {
 /* Container */
 .container {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1200px;
 }
 
 /* Header */
@@ -67,11 +67,11 @@ tbody tr {
 
 /* Alternating row colors */
 tbody tr:nth-child(even) {
-  background: rgba(255, 255, 255, 0.02); /* subtle dark gray */
+  background: rgba(255, 255, 255, 0.02);
 }
 
 tbody tr:nth-child(odd) {
-  background: rgba(255, 255, 255, 0.06); /* slightly lighter */
+  background: rgba(255, 255, 255, 0.06);
 }
 
 /* Hover highlight */
@@ -88,6 +88,22 @@ tbody td {
 tbody td:first-child {
   font-weight: 700;
   color: #7cfa15;
+}
+
+/* ✅ Cut line only when Rank is sorted */
+table.rank-sorted tbody tr:nth-child(6) {
+  position: relative;
+}
+
+table.rank-sorted tbody tr:nth-child(6)::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #ff4444;
+  box-shadow: 0 0 6px rgba(255, 68, 68, 0.7);
 }
 
 /* Responsive */

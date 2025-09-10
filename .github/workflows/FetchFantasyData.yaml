@@ -2,7 +2,7 @@ name: Fetch Fantasy Football Data
 
 on:
   schedule:
-    - cron: "0 10 * * 2" # every Tuesday at 3am PST
+    - cron: "0 10 * * *" # every Tuesday at 3am PST
   workflow_dispatch:
 
 jobs:
