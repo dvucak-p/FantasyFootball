@@ -68,7 +68,7 @@ first_place_wins = max([t.wins for t in league.teams])
 for team in league.teams:
     overall_record = f"{team.wins}-{team.losses}-{team.ties}"
     wl_record = f"{team.wins}-{team.losses}"
-    win_pct = ((team.wins + (0.5 * team.ties)) / ({team.wins}-{team.losses}-{team.ties})) * 100
+    win_pct = f"(({team.wins} + (0.5 * {team.ties})) / ({team.wins}-{team.losses}-{team.ties})) * 100"
     median_record = median_records[team.team_id]
     median_str = f"{median_record['wins']}-{median_record['losses']}"
     gb = (first_place_wins - team.wins)
