@@ -34,7 +34,7 @@ def get_median_records(league):
     else:
         max_week_num = 14
 
-    for week in range(1, max_week_num):
+    for week in range(2, max_week_num):
         try:
             box_scores = league.box_scores(week)
         except KeyError:
