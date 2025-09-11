@@ -43,7 +43,7 @@ def get_median_records(l: League) -> dict:
     median_records = {t.team_id: {"wins": 0, "losses": 0} for t in l.teams}
     max_week = min(l.current_week + 1, 14)
 
-    for week in range(1, max_week):
+    for week in range(2, max_week):
         try:
             box_scores = l.box_scores(week)
         except KeyError:
