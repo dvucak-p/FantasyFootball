@@ -34,7 +34,7 @@
     "GB": 1.0,
     "PF": 121.95,
     "PA": 143.6,
-    "Acquisition Budget": 70,
+    "Acquisition Budget": 50,
     "Team Logo": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/572b47f0-893d-11f0-9d0e-d3c969c03a65",
     "Win %": 0.5
   },
@@ -47,7 +47,7 @@
     "GB": 2.0,
     "PF": 109.0,
     "PA": 115.9,
-    "Acquisition Budget": 100,
+    "Acquisition Budget": 70,
     "Team Logo": "https://g.espncdn.com/lm-static/ffl/images/default_logos/12.svg",
     "Win %": 0.0
   },
@@ -73,7 +73,7 @@
     "GB": 2.0,
     "PF": 105.95,
     "PA": 135.6,
-    "Acquisition Budget": 100,
+    "Acquisition Budget": 79,
     "Team Logo": "https://g.espncdn.com/lm-static/logo-packs/core/BobsBurgers/Bob_Happy.svg",
     "Win %": 0.0
   },
@@ -112,7 +112,7 @@
     "GB": 0.0,
     "PF": 135.6,
     "PA": 105.95,
-    "Acquisition Budget": 100,
+    "Acquisition Budget": 99,
     "Team Logo": "https://g.espncdn.com/lm-static/ffl/images/default_logos/19.svg",
     "Win %": 1.0
   },
@@ -125,7 +125,7 @@
     "GB": 0.0,
     "PF": 115.9,
     "PA": 109.0,
-    "Acquisition Budget": 100,
+    "Acquisition Budget": 87,
     "Team Logo": "https://g.espncdn.com/lm-static/ffl/images/default_logos/1.svg",
     "Win %": 1.0
   },
@@ -138,7 +138,7 @@
     "GB": 1.5,
     "PF": 89.2,
     "PA": 0.0,
-    "Acquisition Budget": 100,
+    "Acquisition Budget": 35,
     "Team Logo": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/81d85450-89cb-11f0-ac72-978f48643a48",
     "Win %": 0.0
   },
