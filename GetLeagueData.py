@@ -98,29 +98,29 @@ for t in league.teams:
 
 
 # --- Merge Week 1 Results ---
-with open("week_1_2025_results.json") as f:
-    week1_lookup = {normalize_name(d["Team"]): d for d in json.load(f)}
+# with open("week_1_2025_results.json") as f:
+#     week1_lookup = {normalize_name(d["Team"]): d for d in json.load(f)}
 
-for team in teams_data:
-    norm_name = normalize_name(team["Team"])
-    wk = week1_lookup.get(norm_name)
+# for team in teams_data:
+#     norm_name = normalize_name(team["Team"])
+#     wk = week1_lookup.get(norm_name)
 
-    if not wk:
-        print(f"[WARN] No Week 1 match for: {team['Team']} (normalized: {norm_name})")
-        continue
+#     if not wk:
+#         print(f"[WARN] No Week 1 match for: {team['Team']} (normalized: {norm_name})")
+#         continue
 
-    for field in ("Overall Record", "Matchup Record", "Median Score Record"):
-        combined = [
-            a + b for a, b in zip(
-                record_to_list(team[field]),
-                record_to_list(wk.get(field, "0-0-0"))
-            )
-        ]
-        team[field] = list_to_record(combined)
+#     for field in ("Overall Record", "Matchup Record", "Median Score Record"):
+#         combined = [
+#             a + b for a, b in zip(
+#                 record_to_list(team[field]),
+#                 record_to_list(wk.get(field, "0-0-0"))
+#             )
+#         ]
+#         team[field] = list_to_record(combined)
 
-    # PF / PA merge
-    team["PF"] = round(to_float(team["PF"]) + to_float(wk.get("PF", 0)), 2)
-    team["PA"] = round(to_float(team["PA"]) + to_float(wk.get("PA", 0)), 2)
+#     # PF / PA merge
+#     team["PF"] = round(to_float(team["PF"]) + to_float(wk.get("PF", 0)), 2)
+#     team["PA"] = round(to_float(team["PA"]) + to_float(wk.get("PA", 0)), 2)
 
 
 # --- Calculate Win % ---
