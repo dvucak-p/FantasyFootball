@@ -41,7 +41,7 @@ def to_float(v) -> float:
 
 # --- Median W/L Record ---
 def get_median_records(l: League) -> dict:
-    """Calculate win/loss vs median score each week (from week 2 onward)."""
+    # """Calculate win/loss vs median score each week (from week 2 onward)."""
     median_records = {t.team_id: {"wins": 0, "losses": 0} for t in l.teams}
     max_week = min(l.current_week + 1, 14)
 
@@ -52,7 +52,9 @@ def get_median_records(l: League) -> dict:
             continue
 
         scores = [s for b in box_scores for s in (b.home_score, b.away_score) if s is not None]
-        if not scores:
+
+        # Skip if no scores OR all scores are 0 (season not started or week unplayed)
+        if not scores or all(s == 0 for s in scores):
             continue
 
         scores.sort()
@@ -67,6 +69,7 @@ def get_median_records(l: League) -> dict:
                 median_records[team.team_id][key] += 1
 
     return median_records
+
 
 
 median_records = get_median_records(league)
