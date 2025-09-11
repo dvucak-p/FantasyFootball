@@ -93,8 +93,7 @@ for t in league.teams:
         "PF": round(t.points_for, 2),
         "PA": round(t.points_against, 2),
         "Acquisition Budget": 100 - t.acquisition_budget_spent,
-        "Team Logo": t.logo_url,
-        "Outcomes": t.outcomes
+        "Team Logo": t.logo_url
         # Win % will be calculated later
     })
 
