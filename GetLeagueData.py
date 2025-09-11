@@ -13,6 +13,7 @@ OUTPUT_FILE = Path("LeagueData.json")
 
 # Get credentials from environment
 SWID, ESPN_S2 = os.getenv("SWID"), os.getenv("ESPN_S2")
+
 if not SWID or not ESPN_S2:
     raise ValueError("Missing SWID or ESPN_S2 environment variables")
 
@@ -40,6 +41,7 @@ def to_float(v) -> float:
 
 # --- Median W/L Record ---
 def get_median_records(l: League) -> dict:
+    """Calculate win/loss vs median score each week."""
     median_records = {t.team_id: {"wins": 0, "losses": 0} for t in l.teams}
     max_week = min(l.current_week + 1, 14)
 
@@ -49,8 +51,9 @@ def get_median_records(l: League) -> dict:
         except KeyError:
             continue
 
+        # collect only non-null scores
         scores = [s for b in box_scores for s in (b.home_score, b.away_score) if s is not None]
-        if not scores:
+        if not scores:   # nothing played → skip this week
             continue
 
         scores.sort()
@@ -59,9 +62,10 @@ def get_median_records(l: League) -> dict:
 
         for b in box_scores:
             for team, score in [(b.home_team, b.home_score), (b.away_team, b.away_score)]:
-                if team:
-                    key = "wins" if score >= median else "losses"
-                    median_records[team.team_id][key] += 1
+                if team is None or score is None:   # skip if no score
+                    continue
+                key = "wins" if score >= median else "losses"
+                median_records[team.team_id][key] += 1
 
     return median_records
 
@@ -89,26 +93,27 @@ for t in league.teams:
         "PF": round(t.points_for, 2),
         "PA": round(t.points_against, 2),
         "Acquisition Budget": 100 - t.acquisition_budget_spent,
-        "Team Logo": t.logo_url
+        "Team Logo": t.logo_url,
+        "Outcomes": t.outcomes
         # Win % will be calculated later
     })
 
 
 # --- Merge Week 1 Results ---
-# with open("week_1_2025_results.json") as f:
-#     week1_lookup = {normalize_name(d["Team"]): d for d in json.load(f)}
+with open("week_1_2025_results.json") as f:
+    week1_lookup = {normalize_name(d["Team"]): d for d in json.load(f)}
 
-# for team in teams_data:
-#     wk = week1_lookup.get(normalize_name(team["Team"]))
-#     if not wk:
-#         continue
+for team in teams_data:
+    wk = week1_lookup.get(normalize_name(team["Team"]))
+    if not wk:
+        continue
 
-#     for field in ("Overall Record", "Matchup Record", "Median Score Record"):
-#         combined = [a + b for a, b in zip(record_to_list(team[field]), record_to_list(wk.get(field, "0-0-0")))]
-#         team[field] = list_to_record(combined)
+    for field in ("Overall Record", "Matchup Record", "Median Score Record"):
+        combined = [a + b for a, b in zip(record_to_list(team[field]), record_to_list(wk.get(field, "0-0-0")))]
+        team[field] = list_to_record(combined)
 
-#     team["PF"] = round(to_float(team["PF"]) + to_float(wk.get("PF", 0)), 2)
-#     team["PA"] = round(to_float(team["PA"]) + to_float(wk.get("PA", 0)), 2)
+    team["PF"] = round(to_float(team["PF"]) + to_float(wk.get("PF", 0)), 2)
+    team["PA"] = round(to_float(team["PA"]) + to_float(wk.get("PA", 0)), 2)
 
 
 # --- Calculate Win % after all merges ---
