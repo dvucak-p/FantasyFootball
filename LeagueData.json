@@ -1,16 +1,16 @@
 [
   {
-    "Rank": 7,
+    "Rank": 5,
     "Team": "HutHutSmut",
-    "Overall Record": "3-3-0",
+    "Overall Record": "4-2-0",
     "Matchup Record": "2-1-0",
-    "Median Score Record": "1-2-0",
-    "GB": 3.0,
+    "Median Score Record": "2-1-0",
+    "GB": 2.0,
     "PF": 193.85,
     "PA": 216.55,
     "Acquisition Budget": 98,
     "Team Logo": "https://i.imgur.com/kauVAHf.jpg",
-    "Win %": 0.5
+    "Win %": 0.67
   },
   {
     "Rank": 2,
@@ -26,17 +26,17 @@
     "Win %": 0.83
   },
   {
-    "Rank": 5,
+    "Rank": 8,
     "Team": "JJ.2.JJ ",
-    "Overall Record": "3-3-0",
+    "Overall Record": "2-4-0",
     "Matchup Record": "1-2-0",
-    "Median Score Record": "2-1-0",
-    "GB": 3.0,
+    "Median Score Record": "1-2-0",
+    "GB": 4.0,
     "PF": 238.4,
     "PA": 259.3,
     "Acquisition Budget": 29,
     "Team Logo": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/572b47f0-893d-11f0-9d0e-d3c969c03a65",
-    "Win %": 0.5
+    "Win %": 0.33
   },
   {
     "Rank": 10,
@@ -52,33 +52,33 @@
     "Win %": 0.17
   },
   {
-    "Rank": 11,
+    "Rank": 9,
     "Team": "The Booze Cougs",
-    "Overall Record": "1-5-0",
+    "Overall Record": "2-4-0",
     "Matchup Record": "1-2-0",
-    "Median Score Record": "0-3-0",
-    "GB": 5.0,
+    "Median Score Record": "1-2-0",
+    "GB": 4.0,
     "PF": 219.05,
     "PA": 200.35,
     "Acquisition Budget": 97,
     "Team Logo": "https://pbs.twimg.com/profile_images/503983068521041921/SbJHlity.jpeg",
-    "Win %": 0.17
+    "Win %": 0.33
   },
   {
-    "Rank": 9,
+    "Rank": 11,
     "Team": "Catman",
-    "Overall Record": "1-5-0",
+    "Overall Record": "0-6-0",
     "Matchup Record": "0-3-0",
-    "Median Score Record": "1-2-0",
-    "GB": 5.0,
+    "Median Score Record": "0-3-0",
+    "GB": 6.0,
     "PF": 220.45,
     "PA": 271.0,
     "Acquisition Budget": 78,
     "Team Logo": "https://g.espncdn.com/lm-static/logo-packs/core/BobsBurgers/Bob_Happy.svg",
-    "Win %": 0.17
+    "Win %": 0.0
   },
   {
-    "Rank": 8,
+    "Rank": 7,
     "Team": "The Senor-itis Syndicate",
     "Overall Record": "2-4-0",
     "Matchup Record": "1-2-0",
@@ -91,17 +91,17 @@
     "Win %": 0.33
   },
   {
-    "Rank": 3,
+    "Rank": 1,
     "Team": "Waxed and Jaxed",
-    "Overall Record": "5-1-0",
+    "Overall Record": "6-0-0",
     "Matchup Record": "3-0-0",
-    "Median Score Record": "2-1-0",
-    "GB": 1.0,
+    "Median Score Record": "3-0-0",
+    "GB": 0,
     "PF": 267.95,
     "PA": 235.05,
     "Acquisition Budget": 65,
     "Team Logo": "https://g.espncdn.com/lm-static/logo-packs/ffl/FrozenTundra-ToddDetwiler/TundraPack_12_01.svg",
-    "Win %": 0.83
+    "Win %": 1.0
   },
   {
     "Rank": 4,
@@ -117,17 +117,17 @@
     "Win %": 0.83
   },
   {
-    "Rank": 1,
+    "Rank": 3,
     "Team": "Snarky Pig Lizards",
-    "Overall Record": "6-0-0",
+    "Overall Record": "5-1-0",
     "Matchup Record": "3-0-0",
-    "Median Score Record": "3-0-0",
-    "GB": 0,
+    "Median Score Record": "2-1-0",
+    "GB": 1.0,
     "PF": 295.8,
     "PA": 234.15,
     "Acquisition Budget": 82,
     "Team Logo": "https://g.espncdn.com/lm-static/ffl/images/default_logos/1.svg",
-    "Win %": 1.0
+    "Win %": 0.83
   },
   {
     "Rank": 6,
