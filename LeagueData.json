@@ -2,15 +2,15 @@
   {
     "Rank": 3,
     "Team": "HutHutSmut",
-    "Overall Record": "16-2-0",
+    "Overall Record": "15-3-0",
     "Matchup Record": "10-1-0",
-    "Median Score Record": "6-1-0",
+    "Median Score Record": "5-2-0",
     "GB": 1.0,
     "PF": 788.7,
     "PA": 701.4,
     "Acquisition Budget": 79,
     "Team Logo": "https://i.imgur.com/kauVAHf.jpg",
-    "Win %": 0.89
+    "Win %": 0.83
   },
   {
     "Rank": 6,
@@ -18,7 +18,7 @@
     "Overall Record": "10-8-0",
     "Matchup Record": "6-5-0",
     "Median Score Record": "4-3-0",
-    "GB": 7.0,
+    "GB": 6.0,
     "PF": 812.15,
     "PA": 648.05,
     "Acquisition Budget": 92,
@@ -26,12 +26,12 @@
     "Win %": 0.56
   },
   {
-    "Rank": 9,
+    "Rank": 8,
     "Team": "JJ.2.JJ ",
     "Overall Record": "7-11-0",
     "Matchup Record": "4-7-0",
     "Median Score Record": "3-4-0",
-    "GB": 10.0,
+    "GB": 9.0,
     "PF": 690.8,
     "PA": 642.95,
     "Acquisition Budget": 29,
@@ -41,15 +41,15 @@
   {
     "Rank": 10,
     "Team": "Threat Level Midnight ",
-    "Overall Record": "5-13-0",
+    "Overall Record": "4-14-0",
     "Matchup Record": "2-9-0",
-    "Median Score Record": "3-4-0",
+    "Median Score Record": "2-5-0",
     "GB": 12.0,
     "PF": 663.75,
     "PA": 740.75,
     "Acquisition Budget": 35,
     "Team Logo": "https://g.espncdn.com/lm-static/ffl/images/default_logos/12.svg",
-    "Win %": 0.28
+    "Win %": 0.22
   },
   {
     "Rank": 5,
@@ -57,7 +57,7 @@
     "Overall Record": "11-7-0",
     "Matchup Record": "7-4-0",
     "Median Score Record": "4-3-0",
-    "GB": 6.0,
+    "GB": 5.0,
     "PF": 765.8,
     "PA": 568.6,
     "Acquisition Budget": 54,
@@ -70,7 +70,7 @@
     "Overall Record": "2-16-0",
     "Matchup Record": "1-10-0",
     "Median Score Record": "1-6-0",
-    "GB": 15.0,
+    "GB": 14.0,
     "PF": 659.3,
     "PA": 736.3,
     "Acquisition Budget": 78,
@@ -80,28 +80,28 @@
   {
     "Rank": 7,
     "Team": "The Senor-itis Syndicate",
-    "Overall Record": "9-9-0",
+    "Overall Record": "8-10-0",
     "Matchup Record": "5-6-0",
-    "Median Score Record": "4-3-0",
+    "Median Score Record": "3-4-0",
     "GB": 8.0,
     "PF": 779.7,
     "PA": 763.15,
     "Acquisition Budget": 83,
     "Team Logo": "https://g.espncdn.com/lm-static/logo-packs/core/CatsAndDogs/cats_dogs-3.svg",
-    "Win %": 0.5
+    "Win %": 0.44
   },
   {
     "Rank": 1,
     "Team": "Waxed and Jaxed",
-    "Overall Record": "17-1-0",
+    "Overall Record": "16-2-0",
     "Matchup Record": "10-1-0",
-    "Median Score Record": "7-0-0",
+    "Median Score Record": "6-1-0",
     "GB": 0,
     "PF": 874.6,
     "PA": 805.7,
     "Acquisition Budget": 65,
     "Team Logo": "https://g.espncdn.com/lm-static/logo-packs/ffl/FrozenTundra-ToddDetwiler/TundraPack_12_01.svg",
-    "Win %": 0.94
+    "Win %": 0.89
   },
   {
     "Rank": 2,
@@ -109,7 +109,7 @@
     "Overall Record": "16-2-0",
     "Matchup Record": "9-2-0",
     "Median Score Record": "7-0-0",
-    "GB": 1.0,
+    "GB": 0.0,
     "PF": 846.4,
     "PA": 792.05,
     "Acquisition Budget": 84,
@@ -122,7 +122,7 @@
     "Overall Record": "12-6-0",
     "Matchup Record": "7-4-0",
     "Median Score Record": "5-2-0",
-    "GB": 5.0,
+    "GB": 4.0,
     "PF": 799.05,
     "PA": 635.9,
     "Acquisition Budget": 63,
@@ -130,29 +130,29 @@
     "Win %": 0.67
   },
   {
-    "Rank": 8,
+    "Rank": 9,
     "Team": "Bo Knows",
-    "Overall Record": "7-10-0",
+    "Overall Record": "6-11-0",
     "Matchup Record": "4-6-0",
-    "Median Score Record": "3-4-0",
+    "Median Score Record": "2-5-0",
     "GB": 9.5,
     "PF": 724.05,
     "PA": 705.45,
     "Acquisition Budget": 33,
     "Team Logo": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/81d85450-89cb-11f0-ac72-978f48643a48",
-    "Win %": 0.41
+    "Win %": 0.35
   },
   {
     "Rank": 12,
     "Team": "Ghost Team",
-    "Overall Record": "1-17-0",
+    "Overall Record": "0-18-0",
     "Matchup Record": "0-11-0",
-    "Median Score Record": "1-6-0",
+    "Median Score Record": "0-7-0",
     "GB": 16.0,
     "PF": 72.2,
     "PA": 647.0,
     "Acquisition Budget": 100,
     "Team Logo": "https://g.espncdn.com/lm-static/logo-packs/ffl/HelmetAlphabet-ESPN/Helmet-G.svg",
-    "Win %": 0.06
+    "Win %": 0.0
   }
 ]
