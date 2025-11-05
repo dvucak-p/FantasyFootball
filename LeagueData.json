@@ -47,7 +47,7 @@
     "GB": 13.0,
     "PF": 1041.5,
     "PA": 1074.25,
-    "Acquisition Budget": 23,
+    "Acquisition Budget": 14,
     "Team Logo": "https://g.espncdn.com/lm-static/ffl/images/default_logos/12.svg",
     "Win %": 0.38
   },
@@ -73,7 +73,7 @@
     "GB": 20.0,
     "PF": 1013.0,
     "PA": 1176.8,
-    "Acquisition Budget": 78,
+    "Acquisition Budget": 58,
     "Team Logo": "https://g.espncdn.com/lm-static/logo-packs/core/BobsBurgers/Bob_Happy.svg",
     "Win %": 0.12
   },
@@ -86,7 +86,7 @@
     "GB": 10.0,
     "PF": 1147.95,
     "PA": 1107.0,
-    "Acquisition Budget": 72,
+    "Acquisition Budget": 65,
     "Team Logo": "https://g.espncdn.com/lm-static/logo-packs/core/CatsAndDogs/cats_dogs-3.svg",
     "Win %": 0.5
   },
@@ -97,7 +97,7 @@
     "Matchup Record": "14-3-0",
     "Median Score Record": "8-1-0",
     "GB": 1.0,
-    "PF": 1311.85,
+    "PF": 1309.85,
     "PA": 1058.5,
     "Acquisition Budget": 65,
     "Team Logo": "https://g.espncdn.com/lm-static/logo-packs/ffl/FrozenTundra-ToddDetwiler/TundraPack_12_01.svg",
@@ -125,7 +125,7 @@
     "GB": 10.0,
     "PF": 1143.9,
     "PA": 1013.3,
-    "Acquisition Budget": 55,
+    "Acquisition Budget": 45,
     "Team Logo": "https://g.espncdn.com/lm-static/ffl/images/default_logos/1.svg",
     "Win %": 0.5
   },
@@ -150,7 +150,7 @@
     "Median Score Record": "0-9-0",
     "GB": 23.0,
     "PF": 105.8,
-    "PA": 1075.25,
+    "PA": 1073.25,
     "Acquisition Budget": 100,
     "Team Logo": "https://g.espncdn.com/lm-static/logo-packs/ffl/HelmetAlphabet-ESPN/Helmet-G.svg",
     "Win %": 0.0
