@@ -26,7 +26,7 @@
     "Win %": 0.67
   },
   {
-    "Rank": 8,
+    "Rank": 7,
     "Team": "JJ.2.JJ ",
     "Overall Record": "14-16-0",
     "Matchup Record": "8-11-0",
@@ -39,7 +39,7 @@
     "Win %": 0.47
   },
   {
-    "Rank": 9,
+    "Rank": 8,
     "Team": "Threat Level Midnight ",
     "Overall Record": "14-16-0",
     "Matchup Record": "8-11-0",
@@ -54,41 +54,41 @@
   {
     "Rank": 5,
     "Team": "The Booze Cougs",
-    "Overall Record": "19-11-0",
+    "Overall Record": "18-12-0",
     "Matchup Record": "12-7-0",
-    "Median Score Record": "7-4-0",
-    "GB": 7.0,
+    "Median Score Record": "6-5-0",
+    "GB": 8.0,
     "PF": 1337.05,
     "PA": 1087.05,
     "Acquisition Budget": 26,
     "Team Logo": "https://pbs.twimg.com/profile_images/503983068521041921/SbJHlity.jpeg",
-    "Win %": 0.63
+    "Win %": 0.6
   },
   {
     "Rank": 11,
     "Team": "Catman",
-    "Overall Record": "4-26-0",
+    "Overall Record": "3-27-0",
     "Matchup Record": "2-17-0",
-    "Median Score Record": "2-9-0",
-    "GB": 22.0,
+    "Median Score Record": "1-10-0",
+    "GB": 23.0,
     "PF": 1130.1,
     "PA": 1307.6,
     "Acquisition Budget": 58,
     "Team Logo": "https://g.espncdn.com/lm-static/logo-packs/core/BobsBurgers/Bob_Happy.svg",
-    "Win %": 0.13
+    "Win %": 0.1
   },
   {
-    "Rank": 7,
+    "Rank": 9,
     "Team": "The Senor-itis Syndicate",
-    "Overall Record": "14-16-0",
+    "Overall Record": "13-17-0",
     "Matchup Record": "9-10-0",
-    "Median Score Record": "5-6-0",
-    "GB": 12.0,
+    "Median Score Record": "4-7-0",
+    "GB": 13.0,
     "PF": 1269.45,
     "PA": 1242.95,
     "Acquisition Budget": 58,
     "Team Logo": "https://g.espncdn.com/lm-static/logo-packs/core/CatsAndDogs/cats_dogs-3.svg",
-    "Win %": 0.47
+    "Win %": 0.43
   },
   {
     "Rank": 1,
@@ -119,40 +119,40 @@
   {
     "Rank": 6,
     "Team": "Snarky Pig Lizards",
-    "Overall Record": "17-13-0",
+    "Overall Record": "16-14-0",
     "Matchup Record": "10-9-0",
-    "Median Score Record": "7-4-0",
-    "GB": 9.0,
+    "Median Score Record": "6-5-0",
+    "GB": 10.0,
     "PF": 1308.8,
     "PA": 1141.35,
     "Acquisition Budget": 27,
     "Team Logo": "https://g.espncdn.com/lm-static/ffl/images/default_logos/1.svg",
-    "Win %": 0.57
+    "Win %": 0.53
   },
   {
     "Rank": 10,
     "Team": "Puka's Pals",
-    "Overall Record": "11-17-0",
+    "Overall Record": "10-18-0",
     "Matchup Record": "7-11-0",
-    "Median Score Record": "4-6-0",
-    "GB": 14.0,
+    "Median Score Record": "3-7-0",
+    "GB": 15.0,
     "PF": 1125.6,
     "PA": 1235.9,
     "Acquisition Budget": 0,
     "Team Logo": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/bf17eab0-bfef-11f0-8306-0b32d1884cc7",
-    "Win %": 0.39
+    "Win %": 0.36
   },
   {
     "Rank": 12,
     "Team": "Ghost Team",
-    "Overall Record": "1-29-0",
+    "Overall Record": "0-30-0",
     "Matchup Record": "0-19-0",
-    "Median Score Record": "1-10-0",
-    "GB": 25.0,
+    "Median Score Record": "0-11-0",
+    "GB": 26.0,
     "PF": 110.2,
     "PA": 1189.0,
     "Acquisition Budget": 100,
     "Team Logo": "https://g.espncdn.com/lm-static/logo-packs/ffl/HelmetAlphabet-ESPN/Helmet-G.svg",
-    "Win %": 0.03
+    "Win %": 0.0
   }
 ]
