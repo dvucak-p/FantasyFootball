@@ -1,6 +1,6 @@
 [
   {
-    "Rank": 4,
+    "Rank": 3,
     "Team": "HutHutSmut",
     "Overall Record": "23-13-0",
     "Matchup Record": "15-8-0",
@@ -41,18 +41,18 @@
   {
     "Rank": 8,
     "Team": "Threat Level Midnight ",
-    "Overall Record": "16-20-0",
+    "Overall Record": "17-19-0",
     "Matchup Record": "10-13-0",
-    "Median Score Record": "6-7-0",
-    "GB": 15.0,
+    "Median Score Record": "7-6-0",
+    "GB": 14.0,
     "PF": 1442.3,
     "PA": 1407.6,
     "Acquisition Budget": 0,
     "Team Logo": "https://g.espncdn.com/lm-static/ffl/images/default_logos/12.svg",
-    "Win %": 0.44
+    "Win %": 0.47
   },
   {
-    "Rank": 5,
+    "Rank": 4,
     "Team": "The Booze Cougs",
     "Overall Record": "22-14-0",
     "Matchup Record": "14-9-0",
@@ -117,17 +117,17 @@
     "Win %": 0.86
   },
   {
-    "Rank": 3,
+    "Rank": 5,
     "Team": "Snarky Pig Lizards",
-    "Overall Record": "23-13-0",
+    "Overall Record": "22-14-0",
     "Matchup Record": "14-9-0",
-    "Median Score Record": "9-4-0",
-    "GB": 8.0,
+    "Median Score Record": "8-5-0",
+    "GB": 9.0,
     "PF": 1567.0,
     "PA": 1361.25,
     "Acquisition Budget": 13,
     "Team Logo": "https://g.espncdn.com/lm-static/ffl/images/default_logos/1.svg",
-    "Win %": 0.64
+    "Win %": 0.61
   },
   {
     "Rank": 10,
