@@ -8,22 +8,22 @@
     "GB": 6.0,
     "PF": 1720.05,
     "PA": 1603.6,
-    "Acquisition Budget": 76,
+    "Acquisition Budget": 59,
     "Team Logo": "https://i.imgur.com/kauVAHf.jpg",
     "Win %": 0.68
   },
   {
-    "Rank": 7,
+    "Rank": 8,
     "Team": "The Caucasian Capitalist",
-    "Overall Record": "21-19-0",
-    "Matchup Record": "15-12-0",
-    "Median Score Record": "6-7-0",
-    "GB": 12.0,
-    "PF": 1753.2,
-    "PA": 1461.6,
+    "Overall Record": "18-22-0",
+    "Matchup Record": "13-14-0",
+    "Median Score Record": "5-8-0",
+    "GB": 15.0,
+    "PF": 1699.2,
+    "PA": 1549.6,
     "Acquisition Budget": 0,
     "Team Logo": "https://images.cdn2.stockunlimited.net/preview1300/law-office-logo-element_1982960.jpg",
-    "Win %": 0.53
+    "Win %": 0.45
   },
   {
     "Rank": 10,
@@ -39,7 +39,7 @@
     "Win %": 0.38
   },
   {
-    "Rank": 8,
+    "Rank": 7,
     "Team": "Threat Level Midnight ",
     "Overall Record": "20-20-0",
     "Matchup Record": "13-14-0",
@@ -125,7 +125,7 @@
     "GB": 9.0,
     "PF": 1848.9,
     "PA": 1661.65,
-    "Acquisition Budget": 13,
+    "Acquisition Budget": 5,
     "Team Logo": "https://g.espncdn.com/lm-static/ffl/images/default_logos/1.svg",
     "Win %": 0.6
   },
@@ -145,14 +145,14 @@
   {
     "Rank": 12,
     "Team": "Ghost Team",
-    "Overall Record": "0-40-0",
-    "Matchup Record": "0-27-0",
-    "Median Score Record": "0-13-0",
-    "GB": 33.0,
-    "PF": 159.3,
-    "PA": 1606.3,
+    "Overall Record": "3-37-0",
+    "Matchup Record": "2-25-0",
+    "Median Score Record": "1-12-0",
+    "GB": 30.0,
+    "PF": 247.3,
+    "PA": 1552.3,
     "Acquisition Budget": 100,
     "Team Logo": "https://g.espncdn.com/lm-static/logo-packs/ffl/HelmetAlphabet-ESPN/Helmet-G.svg",
-    "Win %": 0.0
+    "Win %": 0.07
   }
 ]
